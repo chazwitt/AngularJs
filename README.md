@@ -62,3 +62,22 @@ angular.module('app').register.directive('imgBigger', function () {
 <div ng-show="check_status == '123' || check_status == '2'" class="text-center">
 error
 ```
+
+* ng的下拉框选择 用ng写法可以这样写, 就可以不用麻烦的ng-if来判断是否选择了.
+```
+//ng
+$scope.selects = [
+    {id:0,name:'禁用'},
+    {id:1,name:'启用'}
+];
+$scope.selected=uinfo.enable;//enable是字段名
+//html:
+<div class="form-group">
+    <label for="" class="col-sm-2 control-label">启用/禁用</label>
+    <div class="col-sm-6">
+        <select required name="enable" ng-model="selected" ng-options="x.id as x.name for x in selects" class="form-control col-sm-6">
+            <option value="">请选择</option>
+        </select>
+    </div>
+</div>
+```
