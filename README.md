@@ -62,3 +62,4 @@ angular.module('app').register.directive('imgBigger', function () {
 <div ng-show="check_status == '123' || check_status == '2'" class="text-center">
 error
 ```
+* ng的下拉框选择 用ng写法可以这样写, 就可以不用麻烦的ng-if来判断是否选择了.
